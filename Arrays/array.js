@@ -1,121 +1,121 @@
-// class MyArray{
-//    constructor(){
-//       this.length = 0;
-//       this.data = {};
-//    }
+class MyArray{
+   constructor(){
+      this.length = 0;
+      this.data = {};
+   }
 
-//    // Custom Push method
-//    push(item){
-//       this.data[this.length] = item;
-//       this.length++;
-//       return this.length;
-//    }
+   // Custom Push method
+   push(item){
+      this.data[this.length] = item;
+      this.length++;
+      return this.length;
+   }
 
-//    // custom Get method
-//    get(index){
-//       return this.data[index]
-//    }
+   // custom Get method
+   get(index){
+      return this.data[index]
+   }
 
-//    // custom Pop method
-//    pop(){
-//       const lastItem = this.data[this.length - 1];
-//       delete this.data[this.length - 1];
-//       this.length--;
-//       return lastItem;
-//    }
+   // custom Pop method
+   pop(){
+      const lastItem = this.data[this.length - 1];
+      delete this.data[this.length - 1];
+      this.length--;
+      return lastItem;
+   }
 
-//    // custom Shift method
-//    shift(){
-//       const firstItem = this.data[0];
+   // custom Shift method
+   shift(){
+      const firstItem = this.data[0];
 
-//       for (let i = 0; i < this.length; i++){
-//          this.data[i] = this.data[i + 1]
-//       }
+      for (let i = 0; i < this.length; i++){
+         this.data[i] = this.data[i + 1]
+      }
 
-//       delete this.data[this.length - 1];
-//       this.length--;
-//       return firstItem;
-//    }
+      delete this.data[this.length - 1];
+      this.length--;
+      return firstItem;
+   }
 
-//    //Custom Delete by index
-//    delete(index){
-//       const item = this.data[index];
+   //Custom Delete by index
+   delete(index){
+      const item = this.data[index];
 
-//       for (let i = index; i < this.length -1; i++){
-//          this.data[i] = this.data[i + 1];
-//       }
+      for (let i = index; i < this.length -1; i++){
+         this.data[i] = this.data[i + 1];
+      }
 
-//       delete this.data[this.length - 1];
-//       this.length--;
-//       return item;
-//    }
-// }
+      delete this.data[this.length - 1];
+      this.length--;
+      return item;
+   }
+}
 
-// const myNewArray = new MyArray();
+const myNewArray = new MyArray();
 
-// myNewArray.push("apple")
-// myNewArray.push("orange")
-// myNewArray.push("mango")
+myNewArray.push("apple")
+myNewArray.push("orange")
+myNewArray.push("mango")
 
-// // console.log(myNewArray);
-// console.log(myNewArray.delete(1));
+// console.log(myNewArray);
+console.log(myNewArray.delete(1));
 
-//// =========================CHALLENGES================================//
-////Reverse string
+// =========================CHALLENGES================================//
+//Reverse string
 
-// function reverseString(name){
-//    const items = name.split("").reverse().join("")
-//    console.log(items)
-// }
+function reverseString(name){
+   const items = name.split("").reverse().join("")
+   console.log(items)
+}
 
-// reverseString("mufasa")
+reverseString("mufasa")
 
-////Palindrome
-// function palindrome(name){
-//    const data = name.split("").reverse().join("");
-//    console.log(data === name);
-// }
+//Palindrome
+function palindrome(name){
+   const data = name.split("").reverse().join("");
+   console.log(data === name);
+}
 
-// palindrome("abb")
+palindrome("abb")
 
-//// INT Reversal
+// INT Reversal
 
-// function intReversal(items){
-//    const item = items.toString().split("").reverse().join("")
-//    const data = parseInt(item) * Math.sign(items)
-//    console.log(data) 
-// }
+function intReversal(items){
+   const item = items.toString().split("").reverse().join("")
+   const data = parseInt(item) * Math.sign(items)
+   console.log(data) 
+}
 
-// intReversal(-123456)
+intReversal(-123456)
 
-// //Sentence capitalization
+//Sentence capitalization
 
-// function capitalize(item){
-//    return item.toLowerCase().split(" ").map((word) => word[0].toUpperCase() + word.slice(1)).join(" ");
-// }
+function capitalize(item){
+   return item.toLowerCase().split(" ").map((word) => word[0].toUpperCase() + word.slice(1)).join(" ");
+}
 
-// console.log(capitalize("milk produce"))
+console.log(capitalize("milk produce"))
 
-////  FizzBuzz
-////  Print numbers from 1 to n
-////  If number is divisible by 3, print "Fizz"
-////  If number is divisible by 5, print "Buzz"
-////  If number is divisible by 3 and 5, print "FizzBuzz"
-////  Else, print the number
+//  FizzBuzz
+//  Print numbers from 1 to n
+//  If number is divisible by 3, print "Fizz"
+//  If number is divisible by 5, print "Buzz"
+//  If number is divisible by 3 and 5, print "FizzBuzz"
+//  Else, print the number
 
-// function fizzBuzz(n){
-//    for(let i = 1; i <= n; i++){
-//       if(i % 3 === 0 && i % 5 === 0){
-//          console.log("FizzBuzz")
-//       }else if(i % 3 === 0){
-//          console.log("Fizz")
-//       }else if(i % 5 === 0){
-//          console.log("Buzz")
-//       }else{
-//          console.log(i)
-//       }
-//    }
-// }
+function fizzBuzz(n){
+   for(let i = 1; i <= n; i++){
+      if(i % 3 === 0 && i % 5 === 0){
+         console.log("FizzBuzz")
+      }else if(i % 3 === 0){
+         console.log("Fizz")
+      }else if(i % 5 === 0){
+         console.log("Buzz")
+      }else{
+         console.log(i)
+      }
+   }
+}
 
 // fizzBuzz(30)
 
