@@ -86,11 +86,53 @@ class LinkedList {
 
       return temp;
    }
-}
 
-const myLinkedList = new LinkedList(1);
-myLinkedList.push(10);
-myLinkedList.unshift(0);
-myLinkedList.shift();
+   // Get the first Element
+   getFirst(){
+      return this.head
+   }
+
+   getLast(){
+      if(!this.head){
+         return null
+      }
+
+      let temp = this.head
+
+      while (temp){
+         if(!temp.next){
+            return temp
+         }
+
+         temp = temp.next
+      }
+   }
+
+   getElByIndex(index){
+      let counter = 0;
+      let temp = this.head;
+      
+      while(temp){
+         if(counter === index){
+            return temp;
+         }
+
+         counter++
+         temp = temp.next
+      }
+
+      return null;
+   }
+} 
+
+const myLinkedList = new LinkedList(0);
+myLinkedList.push(1);
+myLinkedList.push(2);
+myLinkedList.push(3);
+myLinkedList.push(4);
+// myLinkedList.unshift(0);
+// myLinkedList.shift();
 // myLinkedList.pop();
-console.log(myLinkedList);
+// console.log(myLinkedList.getLast());
+// console.log(myLinkedList.getFirst());
+console.log(myLinkedList.getElByIndex(0));
