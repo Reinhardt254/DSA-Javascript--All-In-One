@@ -12,6 +12,8 @@ class LinkedList {
       this.length = 1;
    }
 
+
+   //The push method
    push(value){
       let newNode = new Node(value);
 
@@ -25,6 +27,7 @@ class LinkedList {
       this.length++;
    }
 
+   //The pop method
    pop(){
       if(!this.head){
          return undefined;
@@ -50,6 +53,8 @@ class LinkedList {
       return temp;
    }
 
+
+   //The unshift method
    unshift(value){
       const newNode = new Node(value)
 
@@ -65,6 +70,7 @@ class LinkedList {
       return this;
    }
 
+   //The shift method
    shift(){
       if(!this.head){
          return undefined;
@@ -92,6 +98,8 @@ class LinkedList {
       return this.head
    }
 
+
+   //Get the last element
    getLast(){
       if(!this.head){
          return null
@@ -108,6 +116,7 @@ class LinkedList {
       }
    }
 
+   //Get an element by it's index
    getElByIndex(index){
       let counter = 0;
       let temp = this.head;
@@ -123,6 +132,58 @@ class LinkedList {
 
       return null;
    }
+
+
+   //The set method
+   set(index, value){
+      let temp = this.getElByIndex(index);
+
+      if(temp){
+         temp.value = value;
+         return true;
+      }
+
+      return false;
+   }
+
+   //Insert an element
+   insert(index, value){
+      if(index === 0){
+         return this.unshift(value);
+      }
+
+      if(index === this.length){
+         return this.push(value);
+      }
+
+      const newNode = new Node(value);
+
+      // Uses the get method to find the node right before the desired position (index - 1)
+      const temp = this.getElByIndex(index - 1);
+      newNode.next = newNode
+      temp.next = newNode
+      this.length++
+
+      return true;
+   }
+
+   //Check the size 
+   size(){
+      let counter = 0;
+      let temp = this.head;
+
+      while(temp){
+         counter++
+         temp = temp.next;
+      }
+
+      return counter;
+   }
+
+   //Delete an elelment
+   clear(){
+      this.head = null;
+   }
 } 
 
 const myLinkedList = new LinkedList(0);
@@ -135,4 +196,9 @@ myLinkedList.push(4);
 // myLinkedList.pop();
 // console.log(myLinkedList.getLast());
 // console.log(myLinkedList.getFirst());
-console.log(myLinkedList.getElByIndex(0));
+// console.log(myLinkedList.getElByIndex(0));
+// console.log(myLinkedList.set(4, 10));
+// console.log(myLinkedList.insert(0, 20));
+// console.log(myLinkedList.size());
+console.log(myLinkedList.clear());
+console.log(myLinkedList);
