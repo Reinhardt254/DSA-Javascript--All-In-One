@@ -97,7 +97,6 @@ class LinkedList {
       return this.head
    }
 
-
    //Get the last element
    getLast(){
       if(!this.head){
@@ -131,7 +130,6 @@ class LinkedList {
 
       return null;
    }
-
 
    //The set method
    set(index, value){

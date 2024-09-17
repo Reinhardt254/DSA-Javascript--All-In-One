@@ -2,7 +2,7 @@ class MyArray{
    constructor(){
       this.length = 0;
       this.data = {};
-   }
+   } 
 
    // Custom Push method
    push(item){
