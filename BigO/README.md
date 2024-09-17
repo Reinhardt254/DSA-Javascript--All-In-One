@@ -1,4 +1,4 @@
-* O(n) The more the items the more the time it takes to execute; linear.
+# O(n) The more the items the more the time it takes to execute; linear.
 
 * O(1) constant time, the execution time of an algorithm remains constant regardless of the input size. Example if items have known locations.
 
